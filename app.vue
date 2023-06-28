@@ -1,7 +1,7 @@
 <template>
   <div dir="rtl" :class="{'dark !bg-slate-800': theme === 'dark'}" class="h-screen transition-all">
     <NuxtLayout>
-
+      <NuxtPage />
     </NuxtLayout>
   </div>
 </template>

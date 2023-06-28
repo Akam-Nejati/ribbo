@@ -50,6 +50,9 @@
         </div>
     </nav>
 
+    <div>
+        <slot />
+    </div>
 
     <footer class="bg-gray-100 rounded-lg shadow m-4 dark:bg-slate-900">
         <div class="w-full mx-auto max-w-screen-xl p-4 flex items-center justify-between">

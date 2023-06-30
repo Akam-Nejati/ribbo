@@ -1,6 +1,6 @@
 <template>
-    <div class="w-full flex justify-center mt-10">
-        <div class="w-full max-w-screen-xl px-4">
+    <div class="w-full flex justify-center mt-10 px-4">
+        <div class="w-full max-w-screen-xl">
             <div>
                 <span class="text-xl text-slate-900 dark:text-slate-300">داغترین ها 🔥</span>
             </div>

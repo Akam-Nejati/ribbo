@@ -1,3 +1,4 @@
 <template>
     <IndexHots />
+    <IndexNews />
 </template>

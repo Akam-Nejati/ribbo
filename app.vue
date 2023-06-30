@@ -1,5 +1,5 @@
 <template>
-  <div dir="rtl" :class="{'dark !bg-slate-800': theme === 'dark'}" class="h-screen transition-all">
+  <div dir="rtl" :class="{'dark !bg-slate-800': theme === 'dark'}" class="transition-all text-right pb-1">
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-  import { useThemeStore } from '@/composables/useTheme';
+  import { useThemeStore } from './composables/useTheme';
   import "@/node_modules/vazirmatn/Vazirmatn-font-face.css"
   import { storeToRefs } from "pinia"
 

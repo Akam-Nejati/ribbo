@@ -54,7 +54,7 @@
         <slot />
     </div>
 
-    <footer class="bg-gray-100 rounded-lg shadow m-4 dark:bg-slate-900">
+    <footer class="bg-gray-100 rounded-lg shadow m-4 dark:bg-slate-900 mt-14">
         <div class="w-full mx-auto max-w-screen-xl p-4 flex items-center justify-between">
             <ul class="flex flex-wrap gap-4 sm:gap-6 items-center mx-3 text-sm font-medium text-slate-900 dark:text-slate-400 sm:mt-0">
                 <li>

@@ -5,9 +5,9 @@
                 <span class="text-xl text-slate-900 dark:text-slate-300">جدید ترین ها</span>
             </div>
             <div class="mt-4 grid grid-cols-4 md:grid-cols-6 xl:grid-cols-4 gap-4">
-                <div v-for="itme in 8" class="bg-slate-100 col-span-4 sm:col-span-2 md:col-span-2 xl:col-span-1 rounded-lg dark:bg-slate-900 shadow-xl">
+                <div v-for="itme in 8" class="bg-slate-100 col-span-4 sm:col-span-2 md:col-span-2 xl:col-span-1 rounded-xl dark:bg-slate-900 shadow-xl">
                     <a href="#">
-                        <img class="rounded-t-lg" src="./../../assets//images/11_55_36_nuxt-ecommerce-01.svg" alt="" />
+                        <img class="rounded-t-xl" src="./../../assets//images/11_55_36_nuxt-ecommerce-01.svg" alt="" />
                     </a>
                     <div class="p-5">
                         <a href="#">

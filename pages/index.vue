@@ -1,5 +1,5 @@
 <template>
-    <IndexHots />
-    <IndexNews />
+    <IndexSuggested />
+    <IndexNewPosts />
     <IndexCategories />
 </template>

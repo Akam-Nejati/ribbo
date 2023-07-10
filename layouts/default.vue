@@ -1,6 +1,6 @@
 <template>
     <nav class="bg-transparent">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 xl:px-0 py-4">
             <a href="https://flowbite.com/" class="flex items-center">
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-slate-300">ریبو</span>
             </a>
@@ -54,8 +54,8 @@
         <slot />
     </div>
 
-    <footer class="bg-gray-100 rounded-lg shadow m-4 dark:bg-slate-900 mt-14">
-        <div class="w-full mx-auto max-w-screen-xl p-4 flex items-center justify-between">
+    <footer class="w-ful mx-4 xl:mx-auto max-w-screen-xl bg-gray-100 rounded-lg shadow m-4 dark:bg-slate-900 mt-14">
+        <div class=" p-4 flex items-center justify-between">
             <ul class="flex flex-wrap gap-4 sm:gap-6 items-center mx-3 text-sm font-medium text-slate-900 dark:text-slate-400 sm:mt-0">
                 <li>
                     <NuxtLink to="#" class="hover:underline ">درباره من</NuxtLink>

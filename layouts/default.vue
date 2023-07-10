@@ -58,9 +58,6 @@
         <div class=" p-4 flex items-center justify-between">
             <ul class="flex flex-wrap gap-4 sm:gap-6 items-center mx-3 text-sm font-medium text-slate-900 dark:text-slate-400 sm:mt-0">
                 <li>
-                    <NuxtLink to="#" class="hover:underline ">درباره من</NuxtLink>
-                </li>
-                <li>
                     <NuxtLink to="#" class="hover:underline">تماس با من</NuxtLink>
                 </li>
             </ul>
@@ -100,10 +97,6 @@ const menuItems: MenuItem[] = [
         title: "مقالات",
         route: "articles"
     },
-    {
-        title: "درباره من",
-        route: "abouteUs"
-    }
 ]
 
 const socialNetworks: SocialNetwork[] = [

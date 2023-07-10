@@ -2,7 +2,7 @@
     <div class="flex flex-col items-center mt-14 px-4">
         <div class="w-full max-w-screen-xl">
             <div>
-                <span class="text-xl text-slate-900 dark:text-slate-300">جدید ترین ها</span>
+                <span class="text-xl text-slate-900 dark:text-slate-300">دسته بندی ها</span>
             </div>
             <div class="mt-4 grid grid-cols-4 md:grid-cols-6 xl:grid-cols-4 gap-4">
                 <div v-for="itme in 6"

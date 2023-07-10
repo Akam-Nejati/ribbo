@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Prism from "prismjs";
-import 'prismjs/plugins/line-numbers/prism-line-numbers';
+import "prismjs/plugins/line-numbers/prism-line-numbers";
+import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 import "@/assets/css/prism-one-dark.css"
 
 const preTags = useState<HTMLCollectionOf<HTMLPreElement> | undefined>()
@@ -17,7 +18,6 @@ onMounted(() => {
 
   preArray.forEach(element => {
     element.classList.add("line-numbers")
-    console.log(element);
   });
 
   Prism.highlightAll();

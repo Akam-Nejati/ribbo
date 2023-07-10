@@ -1,24 +1,3 @@
-<template>
-  <div class="article w-full flex justify-center mt-10 px-4 appearance-none">
-    <div v-if="post" class="w-full max-w-screen-md flex flex-col gap-8">
-      <p class="text-slate-950 dark:text-slate-100 drop-shadow-xl text-xl xl:text-2xl font-bold"> {{ title }} </p>
-      <img class="rounded-xl shadow-xl" :src="`http://localhost:1337${thumbnail.data.attributes.url}`">
-      <span class="text-justify text-slate-950 dark:text-slate-100">{{ details }}</span>
-      <div v-html="content" class="content text-slate-900 dark:text-slate-300 leading-10 text-xl text-justify"></div>
-      <!-- <div class="flex justify-between items-center">
-        <div class="flex justify-between items-center gap-4">
-          <span class="text-lg sm:text-xl text-slate-900 dark:text-slate-300"> {{ views }} </span>
-          <Icon name="solar:eye-linear" class="text-xl sm:text-3xl text-slate-900 dark:text-slate-300"></Icon>
-        </div>
-        <div class="flex justify-between items-center gap-4">
-          <span class="text-lg sm:text-xl text-slate-900 dark:text-slate-300"> {{ likes }} </span>
-          <Icon @click="likes()" name="solar:heart-bold" class="text-xl sm:text-3xl text-slate-900 dark:text-slate-300 cursor-pointer drop-shadow-lg hover:drop-shadow-2xl hover:!text-red-400 transition-all"></Icon>
-        </div>
-      </div> -->
-    </div>
-  </div>
-</template>
-
 <script setup lang="ts">
 import Prism from "prismjs";
 import 'prismjs/plugins/line-numbers/prism-line-numbers';
@@ -28,13 +7,13 @@ const preTags = useState<HTMLCollectionOf<HTMLPreElement> | undefined>()
 const route = useRoute()
 const articleId = route.params.id
 const { data: post } = await useFetch<any>(`http://localhost:1337/api/posts/${articleId}?populate=*`)
-const { content, thumbnail, title, details } = post.value.data.attributes
+const { content, thumbnail, title, details }: {content: string, thumbnail: any, title: string, details: string} = post.value.data.attributes
 
 
 onMounted(() => {
   preTags.value = document.getElementsByTagName("pre")
 
-  const preArray = Array.from(preTags.value)
+  const preArray: HTMLPreElement[] = Array.from(preTags.value)
 
   preArray.forEach(element => {
     element.classList.add("line-numbers")
@@ -43,12 +22,19 @@ onMounted(() => {
 
   Prism.highlightAll();
 });
-
-
-function like() {
-  
-}
 </script>
+
+<template>
+  <div class="article w-full flex justify-center mt-10 px-4 appearance-none">
+    <div v-if="post" class="w-full max-w-screen-md flex flex-col gap-8">
+      <p class="text-slate-950 dark:text-slate-100 drop-shadow-xl text-xl xl:text-2xl font-bold"> {{ title }} </p>
+      <img class="rounded-xl shadow-xl" :src="`http://localhost:1337${thumbnail.data.attributes.url}`">
+      <span class="text-justify text-slate-950 dark:text-slate-100">{{ details }}</span>
+      <div v-html="content" class="content text-slate-900 dark:text-slate-300 leading-10 text-xl text-justify"></div>
+    </div>
+  </div>
+</template>
+
 
 <style>
 pre {

@@ -9,7 +9,6 @@ const { data: posts }: any = await useFetch('http://localhost:1337/api/posts?sor
         "pagination[pageSize]": 8
     }
 })
-
 </script>
 
 

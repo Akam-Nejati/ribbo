@@ -95,7 +95,7 @@ const menuItems: MenuItem[] = [
     },
     {
         title: "مقالات",
-        route: "articles"
+        route: "articles/all"
     },
 ]
 

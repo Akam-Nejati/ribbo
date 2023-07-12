@@ -45,7 +45,7 @@ const { data: posts }: any = await useFetch('http://localhost:1337/api/posts?sor
                                 بیشتر
                             </RouterLink>
 
-                            <small class="text-gray-900 dark:text-slate-300 bg-slate-950 p-2 rounded-xl">
+                            <small class="text-gray-900 dark:text-slate-300 bg-slate-200 dark:bg-slate-950 p-2 rounded-xl">
                                 {{ post.attributes.tag }}#
                             </small>
                         </div>

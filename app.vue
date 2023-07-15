@@ -22,7 +22,7 @@ const { theme } = storeToRefs(themeStore)
 }
 
 *::-webkit-scrollbar-track {
-  @apply sm:bg-slate-500 rounded-full;
+  @apply bg-slate-100 dark:sm:bg-slate-500 rounded-full;
 }
 
 *::-webkit-scrollbar-thumb {

@@ -28,8 +28,8 @@ const { data: tags }: any = await useFetch("http://localhost:1337/api/tags")
                         </RouterLink>
                     </div>
                 </div>
-                <div class="col-span-6 sm:col-span-4 flex flex-col gap-4 overflow-scroll rounded-xl h-full">
-                    <div class="w-full bg-gray-100 dark:bg-slate-900 rounded-xl flex flex-col md:flex-row justify-start gap-8 p-4"
+                <div dir="ltr" class="col-span-6 sm:col-span-4 flex flex-col gap-4 overflow-y-auto rounded-xl h-full sm:pr-4">
+                    <div dir="rtl" class="w-full bg-gray-100 dark:bg-slate-900 rounded-xl flex flex-col md:flex-row justify-start gap-8 p-4"
                         v-for="post in posts.data" :key="post.id">
                         <div class="w-full md:w-[10rem] xl:w-[20rem]">
                             <RouterLink :to="`/article/${post.id}`" class="cursor-pointer">

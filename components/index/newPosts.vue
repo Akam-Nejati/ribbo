@@ -18,7 +18,7 @@ const { data: posts }: any = await useFetch('http://localhost:1337/api/posts?sor
         <div class="w-full max-w-screen-xl">
             <div>
                 <span class="text-xl text-slate-900 dark:text-slate-300 ml-4">جدید ترین ها</span>
-                <RouterLink to="articles" class="text-blue-400">
+                <RouterLink to="articles/all" class="text-blue-400">
                     همه مقاله ها <Icon name="mingcute:left-fill"></Icon>
                 </RouterLink>
             </div>

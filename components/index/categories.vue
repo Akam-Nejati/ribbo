@@ -7,7 +7,7 @@ const { data: categories } = await useFetch<any>(`http://localhost:1337/api/cate
         <div class="w-full max-w-screen-xl">
             <div>
                 <span class="text-xl text-slate-900 dark:text-slate-300 ml-4">دسته بندی ها</span>
-                <RouterLink to="articles/all" class="text-blue-400">
+                <RouterLink to="allcategories" class="text-blue-400">
                     همه دسته ها <Icon name="mingcute:left-fill"></Icon>
                 </RouterLink>
             </div>

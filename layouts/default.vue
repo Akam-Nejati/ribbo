@@ -97,6 +97,10 @@ const menuItems: MenuItem[] = [
         title: "مقالات",
         route: "/articles/all"
     },
+    {
+        title: "دسته بندی ها",
+        route: "/allcategories"
+    },
 ]
 
 const socialNetworks: SocialNetwork[] = [

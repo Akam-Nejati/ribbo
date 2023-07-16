@@ -11,7 +11,7 @@
                     <Icon v-if="theme === 'light'" @click="theme = 'dark'" name="solar:moon-linear"
                         class="text-2xl text-gray-900" />
                 </div>
-                <div class="relative hidden md:block">
+                <!-- <div class="relative hidden md:block">
                     <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                         <Icon name="iconamoon:search-duotone" class="text-slate-500" />
 
@@ -20,7 +20,7 @@
                     <input type="text" id="search-navbar"
                         class="block w-full p-2 pl-10 text-sm text-slate-900 border border-gray-300 rounded-lg bg-gray-100 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         placeholder="جست و جو">
-                </div>
+                </div> -->
                 <button data-collapse-toggle="navbar-search" type="button"
                     class="inline-flex items-center p-2 text-sm text-slate-500 rounded-lg md:hidden hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-slate-400 dark:hover:bg-slate-700 dark:focus:ring-gray-600"
                     aria-controls="navbar-search" aria-expanded="false">
@@ -29,14 +29,14 @@
                 </button>
             </div>
             <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
-                <div class="relative mt-3 md:hidden">
+                <!-- <div class="relative mt-3 md:hidden">
                     <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                         <Icon name="iconamoon:search-duotone" class="text-slate-500" />
                     </div>
                     <input type="text" id="search-navbar"
                         class="block w-full p-2 pl-10 text-sm text-slate-900 border border-gray-300 rounded-lg bg-gray-100 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         placeholder="جستوجو">
-                </div>
+                </div> -->
                 <ul
                     class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-100 md:bg-transparent md:flex-row gap-2 md:gap-8 md:mt-0 md:border-0  dark:bg-slate-900 md:dark:bg-slate-800 md:dark:bg-transparent dark:border-gray-700">
                     <li v-for="(item, index) in menuItems" :key="index">

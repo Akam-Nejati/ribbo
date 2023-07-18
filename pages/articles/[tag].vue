@@ -21,16 +21,17 @@ const { data: tags }: any = await useFetch("http://localhost:1337/api/tags")
                 class="grid grid-cols-6 gap-4 xl:gap-14 sm:h-[calc(100vh-16.4rem)] md:h-[calc(100vh-17.1rem)]">
                 <div class="col-span-6 sm:col-span-2 rounded-xl bg-gray-100 dark:bg-slate-900 p-4">
                     <span class="text-slate-900 dark:text-slate-300 text-xl xl:text-2xl">تگ ها</span>
-                    <div class="flex flex-wrap gap-4 mt-4">
+                    <div class="flex flex-wrap gap-4 mt-4" v-if="tags">
                         <RouterLink :to="tag.attributes.tag" v-for="tag in tags.data" :key="tag.id"
                             class="text-gray-900 dark:text-slate-300 bg-slate-200 dark:bg-slate-950 p-2 rounded-xl h-fit">
                             {{ tag.attributes.details }}#
                         </RouterLink>
                     </div>
                 </div>
-                <div dir="ltr" class="col-span-6 sm:col-span-4 flex flex-col gap-4 overflow-y-auto rounded-xl h-full sm:pr-4">
+                <SkeletonArticlesPostsSkeleton v-if="!posts" />
+                <div v-else dir="ltr" class="col-span-6 sm:col-span-4 flex flex-col gap-4 overflow-y-auto rounded-xl h-full sm:pr-4">
                     <div dir="rtl" class="w-full bg-gray-100 dark:bg-slate-900 rounded-xl flex flex-col md:flex-row justify-start gap-8 p-4"
-                        v-for="post in posts.data" :key="post.id">
+                        v-for="post in posts?.data" :key="post.id">
                         <div class="w-full md:w-[10rem] xl:w-[20rem]">
                             <RouterLink :to="`/article/${post.id}`" class="cursor-pointer">
                                 <img class="rounded-xl h-full w-full object-cover"
@@ -50,7 +51,6 @@ const { data: tags }: any = await useFetch("http://localhost:1337/api/tags")
                             <p
                                 class="my-6 text-md font-normal text-gray-700 dark:text-gray-400 text-justify line-clamp-[3]">
                                 {{ post.attributes.details }}</p>
-
                         </div>
                     </div>
                 </div>

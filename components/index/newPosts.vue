@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data: posts }: any = await useFetch('http://localhost:1337/api/posts?sort[0]=createdAt%3Adesc', {
+const { data: newPosts }: any = await useFetch('http://localhost:1337/api/posts?sort[0]=createdAt%3Adesc', {
     params: {
         "populate": "thumbnail",
         "fields[0]": "thumbnail",
@@ -22,8 +22,9 @@ const { data: posts }: any = await useFetch('http://localhost:1337/api/posts?sor
                     همه مقاله ها <Icon name="mingcute:left-fill"></Icon>
                 </RouterLink>
             </div>
-            <div class="mt-4 grid grid-cols-4 md:grid-cols-6 xl:grid-cols-4 gap-4">
-                <div v-for="(post, index) in posts.data" :key="index"
+            <SkeletonNewPostsSkeleton  v-if="!newPosts"/>
+            <div v-else class="mt-4 grid grid-cols-4 md:grid-cols-6 xl:grid-cols-4 gap-4">
+                <div v-for="(post, index) in newPosts.data" :key="index"
                     class="bg-slate-100 col-span-4 sm:col-span-2 md:col-span-2 xl:col-span-1 rounded-xl dark:bg-slate-900 shadow-xl">
                     <RouterLink :to="`article/${post.id}`">
                         <img class="rounded-t-xl"

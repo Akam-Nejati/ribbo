@@ -99,7 +99,7 @@ const menuItems: MenuItem[] = [
     },
     {
         title: "دسته بندی ها",
-        route: "/allcategories"
+        route: "/categories"
     },
 ]
 

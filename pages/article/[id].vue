@@ -26,7 +26,8 @@ onMounted(() => {
 
 <template>
   <div class="article w-full flex justify-center mt-10 px-4 appearance-none">
-    <div v-if="post" class="w-full max-w-screen-md flex flex-col gap-8">
+    <SkeletonArticleSkeleton v-if="!post" />
+    <div v-else class="w-full max-w-screen-md flex flex-col gap-8">
       <p class="text-slate-950 dark:text-slate-100 drop-shadow-xl text-xl xl:text-2xl font-bold"> {{ title }} </p>
       <img class="rounded-xl shadow-xl" :src="`http://localhost:1337${thumbnail.data.attributes.url}`">
       <span class="text-justify text-slate-950 dark:text-slate-100">{{ details }}</span>
